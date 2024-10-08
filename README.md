@@ -10,7 +10,7 @@ This script is designed for use with AzuraCast and Liquidsoap, enabling a video 
 
 ## Prerequisites
 
-- A running Docker installation of AzuraCast.
+- A running Docker installation of AzuraCast ( it has ffmpeg already installed).
 - A valid YouTube stream key.
 - A static MP4 video file for streaming.
 - A TTF font file for the "Now Playing" text.
@@ -63,7 +63,7 @@ videostream = single(video_file)
 videostream = add_nowplaying_text(videostream)
 videostream = source.mux.video(video=videostream, radio)
 
-# Output to YouTube
+# Output to YouTube. Play here for accurate rates asked by YT.
 enc = %ffmpeg(
     format="mpegts", 
     %video.raw(codec="libx264", pixel_format="yuv420p", b="300k", preset="superfast", r=25, g=50),
