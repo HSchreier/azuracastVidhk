@@ -17,7 +17,7 @@ This script is designed for use with AzuraCast and Liquidsoap, enabling a video 
 
 
 3. **Copy and Paste the Script**  
-Open the `liquidsoap.conf` file and paste the following script at the desired location:
+Open the `liquidsoap.conf` file and paste the following script at the end of the liquidsopa config of your station:
 
 ```lua
 # VIDEO STREAM 
